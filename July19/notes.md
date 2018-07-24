@@ -12,3 +12,4 @@
     - If precedence of scanned operator is lesser than precedence of top operator in stack, pop the operator from the stack.
 - Repeat the steps until whole expression is scanned.
 - Empty the stack by poping the element and output them.
+
