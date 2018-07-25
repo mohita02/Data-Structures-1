@@ -10,22 +10,20 @@ class linkedList{
 public:
     void createNode(int val){
         node *n;
-        n = new node;
+        n = (struct node *)malloc(sizeof(node));
         n->data = val;
         n->next = NULL;
         head = n;
     }
     void insertElement(int val){
-        if(head==NULL)
+        if(head==NULL){
             createNode(val);
+        }
         else{
             node *ptr;
             ptr = head;
-            while(ptr->next!=NULL){
-                ptr = ptr->next;
-            }
             node *newNode;
-            newNode = new node;
+            newNode = (struct node *)malloc(sizeof(node));
             newNode->data = val;
             newNode->next = NULL;
             ptr->next = newNode;
@@ -35,7 +33,7 @@ public:
     void insert(int val){
         node *ptr;
         ptr = head;
-        while(ptr->data>val){
+        while(ptr->data<val){
             ptr = ptr->next;
         }
         node *newNode;
@@ -46,10 +44,10 @@ public:
     }
     void traverse()
     {
-        struct node *ptr;
-        for (ptr = head; ptr != NULL; ptr = ptr->next)
+        node *p;
+        for (p = head; p != NULL; p = p->next)
         {
-            cout << ptr->data << " ";
+            cout << p->data << " ";
         }
         cout << endl;
     }
@@ -57,12 +55,11 @@ public:
 
 int main(){
     linkedList l;
-    int n;
+    int n,a;
     cout<<"Enter the number of node: ";
     cin>>n;
     cout<<"Enter the elements : "<<endl;
     for(int i=0;i<n;i++){
-        int a;
         cin>>a;
         l.insertElement(a);
     }
