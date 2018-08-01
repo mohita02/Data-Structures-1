@@ -1,0 +1,34 @@
+Doubly Linked List (2-Way Linked List)
+======================================
+Earlier we used to only access or perform any operation on Linked List in one direction only.
+In this we can access and perform operations in both the  directions.
+In this we have in total 3 pointer, i.e previous, next and info pointer.
+
+* As the name suggests, 
+1. prev/previous is used to point to the previous node.
+2. next is used to point to the next node.
+3. info/information/data points to the data of the current node.
+
+* In this there are certain conditions that tell us that it is a Doubly Linked List :
+
+1. If the previous pointer is pointing to null, then that element is the head element.
+2. If the next pointer is pointing to null, then that is the last element.
+3. The next pointer of the first node points to the prev pointer of the next element.
+4. Similarly the prev pointer of the second node points to the next pointer of the first node.
+
+* Operations in Doubly Linked List :
+1. createNode
+2. insertAtBeg
+3. insertAtEnd
+4. insertInMiddle
+5. deleteAtBeg
+6. deleteAtEnd
+7. searchElement
+8. traverse
+
+Ques. WAP that implements the following operations on a doubly and circular linked list :
+
+1. Insert a new element at the begining, end and in between the given list.
+2. Delete an exisiting element
+3. Search an element
+4. Display all the elements.
