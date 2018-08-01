@@ -1,0 +1,33 @@
+Circular Linked List
+====================
+
+In this we have a circular like Linked List.
+In this the Linked List ends when the last pointer points to the head of the Linked List.
+Now to reach the end we use a loop unitl we find the pointer to head, i.e 
+
+/*
+    while(ptr->next!=head){
+        ptr = ptr->next;
+    }
+*/
+
+Creatation of Circular Linked List
+----------------------------------
+
+void createList(int val){
+    node *ptr;
+    node *n;
+    n = new node;
+    if(head == NULL){
+        n->next = n;
+        head = n; 
+    }
+    else{
+        ptr = head;
+        while(ptr->next != head){
+            ptr = ptr->next;
+        }
+        ptr->next = n;
+        n->next = head;
+    }
+}
