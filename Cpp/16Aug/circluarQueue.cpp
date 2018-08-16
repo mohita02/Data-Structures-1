@@ -23,7 +23,7 @@ public:
         front=nn;
         rear=nn;
     }
-    void insertNode(int val){
+    void enqueue(int val){
         if(front==NULL || rear==NULL){
             createNode(val);
         }
@@ -57,13 +57,13 @@ public:
 };
 int main(void){
     Queue q;
-    q.insertNode(10);
-    q.insertNode(20);
-    q.insertNode(30);
-    q.insertNode(40);
-    q.insertNode(50);
-    q.insertNode(60);
-    q.insertNode(70);
+    q.enqueue(10);
+    q.enqueue(20);
+    q.enqueue(30);
+    q.enqueue(40);
+    q.enqueue(50);
+    q.enqueue(60);
+    q.enqueue(70);
     q.traverse();
     q.dequeue();
     q.traverse();
