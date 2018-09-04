@@ -1,0 +1,8 @@
+Merge Sort
+==========
+- Its based on Conquer and Divide Stragey.   
+- In this we divide the given array into 2 equal half of sub-arrays.
+- In Conquer we sort the 2 sub-arrays recurrsively using merge sort algorithm and then 
+combine the sorted ubs-arrays into single sorted array.
+- First we find the size of array and then find beg, end and mid respectively.
+- After that divide the array until we get a single element.

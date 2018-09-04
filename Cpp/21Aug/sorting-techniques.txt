@@ -1,0 +1,14 @@
+SORTING TECHNIQUES
+==================
+- Quick Sort
+- Merge Sort
+- Insertion Sort
+- Selection Sort
+- Radix Sort
+- Heap Sort
+
+1. Quick Sort : It is based on Divide and Conquer strategy.
+   ----------
+- Here Divide means, partitioning the given problem or given array to be sorted into small sub 
+  problems or into 2 sub arrays each containing about half of the elements of the array.
+- Here Conquer means, sorting the 2 sub arrays recurrsively using sorting algorithms.
