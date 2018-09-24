@@ -1,0 +1,9 @@
+TOWER OF HANOI :
+==============
+is a mathematical puzzle in which we have to move, 'n' number of discs from one tower to another
+tower using one auxillary tower.
+Rule 1 : Only 1 disc can be moved at anytime.
+------
+Rule 2 : Only the top disc can be removed.
+------
+Rule 3 : No large disc can be placed over a small sized disc.
