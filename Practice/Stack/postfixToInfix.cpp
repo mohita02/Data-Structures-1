@@ -17,5 +17,18 @@ string getInfix(string exp){
             string op(1, exp[i]);
             s.push(op);
         }
+
+        // We assume that the input is
+        // a valid postfix and expect
+        // an operator
+        else{
+            string op1 = s.top();
+            s.pop();
+            string op2 = s.top();
+            s.pop();
+            s.push("(" + op2 + exp[i] + op1 + ")");
+        }
     }
+
+    /* There
 }
