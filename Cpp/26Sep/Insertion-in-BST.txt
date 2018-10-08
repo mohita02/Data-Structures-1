@@ -1,0 +1,72 @@
+Insertion in BST
+================
+
+1. There will be 3 part of the linked list that will make a Binary Tree, i.e Left pointer, Right pointer and middle one is the
+	 info node.
+
+Psuedo code
+------------
+
+// Structure of the Linked list
+struct node{
+	int info;
+	strcut node *left;
+	struct node *right;
+};
+
+class BST{
+public:	
+	BST(){
+		left = NULL;
+		right = NULL;
+	}
+	void insert(struct node *root,int num){
+		if(root==NULL){
+			node *n;
+			n = new node;
+			n->info = num;
+			n->left = NULL;
+			n->right = NULL;
+			root = n;
+		}
+		else{
+			if(root->info>num){
+				if(root->left!=NULL){
+					insert(root->left,num);
+				}
+				else{
+					node *n;
+					n = new node;
+					n->info = num;
+					n->left = NULL;
+					n->right = NULL;
+					root->left = n
+				}
+			}
+			else if(root->info<num){
+				if(root->right != NULL){
+					insert(root->right,num);
+				}
+				else{
+					node *n;
+					n = new node;
+					n->info = num;
+					n->right = NULL;
+					n->left = NULL;
+					root->right = n;
+				}
+			}
+		}
+};
+
+int main(){
+	bst bt;
+	struct node *root;
+	root = NULL;
+	int num;
+	for(int i=0;i<n;i++){
+		cin>>num;
+		bt.insert(root,num);
+	}
+	return 0;
+}
