@@ -26,3 +26,38 @@ keys(T1) < key(x) < keys(T2) < key(y) < keys(T3)
 
 So BST property is not violated anywhere.
 ```
+
+**Steps to follow for insertion**
+Let the newly inserted node be w.
+1. Perform standard BST insert for w.
+2. Starting from w, travel up and find the unbalanced node. Let z be the first unbalanced node, y be th child of z that comes on the path from w to z and x be the grandchild of z that comes on the path from w to z.
+3. Re-balance the tree by preforming appropiate roatations on the subtree rooted with z. There can be 4 possible cases that needs to handled as x, y and z can be arranged in 4 ways i.e :
+- y is the left child of z and x is the left child y (Left Left Case)
+- y is the left child of z and x is the right child of y (Left Right Case)
+- y is the right child of z and x is the right child of y (Right Right Case)
+- y is the right child of z and x is the left child of y (Right Left Case)
+
+Operations to be preformed in the above mentioned 4 cases : 
+1. Left Left Case
+
+```
+T1, T2, T3 and T4 are subtrees.
+            z                                    y
+           / \                                 /   \
+          y   T4    Right Rotate(z)           x     z    
+         / \       ----------------->        / \   / \  
+        x   T3                              T1 T2 T3 T4    
+       / \
+      T1  T2
+```
+
+2. Left Right Case
+```
+     z                               z                           x
+    / \                            /   \                        /  \ 
+   y   T4  Left Rotate (y)        x    T4  Right Rotate(z)    y      z
+  / \      - - - - - - - - ->    /  \      - - - - - - - ->  / \    / \
+T1   x                          y    T3                    T1  T2 T3  T4
+    / \                        / \
+  T2   T3                    T1   T2
+```
