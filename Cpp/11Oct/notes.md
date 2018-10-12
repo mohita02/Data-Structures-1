@@ -19,7 +19,7 @@ to find the right child : `2i+2`
             max = rc;
     ```
 6. ```
-    if(max!=1){
+    if(max!=i){
         //Swap arr[max],arr[i]
         heapify(arr,n,i);
     }
